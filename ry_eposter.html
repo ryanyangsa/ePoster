@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>첫 페이지에 일자별로 특정 이미지(비디오) 출력하기</title>
+    </head>
+    <body>
+        <h1 id='title'></h1>
+        <hr/>
+        <div id='eposter'></div>
+        <script src='ry_eposter.js'></script>
+        <script> 
+        	let title = document.getElementById('title');
+        	let eposterDiv = document.getElementById('eposter');
+			let eposterImg = document.createElement('img');
+
+            const today = RY_ePoster.init();
+            const ePoster = RY_ePoster.getTodayPoster(today);  
+
+            title.innerHTML = '오늘의 이미지는 ' + ePoster.url.substr(0,20) + (ePoster.url.length > 20 ? "..." : "")  + ' 입니다.';
+			eposterImg.src = ePoster.url;
+			eposterDiv.appendChild(eposterImg);
+        </script>
+    </body>
+</html>
