@@ -12,7 +12,7 @@
 
 # 사용방법
 
-파일을 같은 디렉토리에 저장한 후, ry_eposter.html 파일을 연다.
+ry_eposter.html과 ry_eposter.js 파일을 같은 디렉토리에 저장한 후, ry_eposter.html 파일을 연다.
 
 # 개선사항
 
